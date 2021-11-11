@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RedVC" customModule="Fooder" customModuleProvider="target">
+            <connections>
+                <outlet property="btnOutlet" destination="m2Q-9l-mR3" id="1PD-uV-lqS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bella" translatesAutoresizingMaskIntoConstraints="NO" id="BmV-v3-n6a">
+                    <rect key="frame" x="20" y="64" width="89.5" height="89.5"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="BmV-v3-n6a" secondAttribute="height" id="M42-4G-NYy"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="40"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dde-ru-I3w">
+                    <rect key="frame" x="25" y="203.5" width="290" height="179.5"/>
+                    <string key="text">Food for 
+Everyone</string>
+                    <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="41"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2Q-9l-mR3">
+                    <rect key="frame" x="25" y="765.5" width="364" height="71.5"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="StartButtonTapped:" destination="-1" eventType="touchUpInside" id="TyA-NH-8eY"/>
+                    </connections>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Toy2" translatesAutoresizingMaskIntoConstraints="NO" id="HeX-Pv-5vQ">
+                    <rect key="frame" x="0.0" y="466.5" width="207" height="269"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Toy1" translatesAutoresizingMaskIntoConstraints="NO" id="odk-JC-E78">
+                    <rect key="frame" x="174" y="431.5" width="240" height="314"/>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.92549026010000002" green="0.35294118520000001" blue="0.27450981740000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="dde-ru-I3w" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.2" id="0gs-vT-atX"/>
+                <constraint firstItem="dde-ru-I3w" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.7" id="4AG-Ah-IRy"/>
+                <constraint firstItem="HeX-Pv-5vQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Ig5-yc-xC6"/>
+                <constraint firstItem="m2Q-9l-mR3" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.08" id="Ixc-Wk-0I1"/>
+                <constraint firstItem="odk-JC-E78" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.35" id="Iyu-4T-7Xc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="m2Q-9l-mR3" secondAttribute="trailing" constant="25" id="Ppn-Ij-3Ks"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="odk-JC-E78" secondAttribute="trailing" id="WpG-fT-e3g"/>
+                <constraint firstItem="m2Q-9l-mR3" firstAttribute="top" secondItem="odk-JC-E78" secondAttribute="bottom" constant="20" id="XiM-vl-ygb"/>
+                <constraint firstItem="odk-JC-E78" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.57971" id="Xus-nb-Dpy"/>
+                <constraint firstItem="m2Q-9l-mR3" firstAttribute="top" secondItem="HeX-Pv-5vQ" secondAttribute="bottom" constant="30" id="YvF-i9-92u"/>
+                <constraint firstItem="BmV-v3-n6a" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="aSo-YZ-lQV"/>
+                <constraint firstItem="HeX-Pv-5vQ" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.3" id="aab-EX-aOU"/>
+                <constraint firstItem="HeX-Pv-5vQ" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="dtT-u8-NM0"/>
+                <constraint firstItem="BmV-v3-n6a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="leq-7T-vKl"/>
+                <constraint firstItem="dde-ru-I3w" firstAttribute="top" secondItem="BmV-v3-n6a" secondAttribute="bottom" constant="50" id="p8N-S3-37x"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="m2Q-9l-mR3" secondAttribute="bottom" constant="25" id="sHg-da-aco"/>
+                <constraint firstItem="dde-ru-I3w" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="u2q-03-qeC"/>
+                <constraint firstItem="m2Q-9l-mR3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="wBb-fT-Pba"/>
+                <constraint firstItem="BmV-v3-n6a" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.1" id="yIg-iA-vOL"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="124"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Bella" width="41" height="51"/>
+        <image name="Toy1" width="218" height="330"/>
+        <image name="Toy2" width="300" height="454"/>
+    </resources>
+</document>
