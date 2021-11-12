@@ -39,6 +39,27 @@ class SelectedProductVC: UIViewController {
         collectionView.register(UINib(nibName: "SelectedProductCell", bundle: nil), forCellWithReuseIdentifier: "SelectedProductCell")
     }
     
+    @IBAction func heardTapped(_ sender: UIButton) {
+        
+        if data?.isLike == true {
+            UIView.animate(withDuration: 0.15, delay: 0, options: .autoreverse) {
+                sender.transform = CGAffineTransform(scaleX: 0.3, y: 0.3)
+            } completion: { [self] _ in
+                sender.setImage(UIImage(systemName: "heart"), for: .normal)
+                data?.isLike = false
+                sender.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }
+        } else {
+            UIView.animate(withDuration: 0.15, delay: 0, options: .autoreverse) {
+                sender.transform = CGAffineTransform(scaleX: 0.3, y: 0.3)
+            } completion: { [self] _ in
+                sender.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+                data?.isLike = true
+                sender.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }
+        }
+    }
+    
     @IBAction func backBtnTapped(_ sender: Any) {
         dismiss(animated: true)
     }
