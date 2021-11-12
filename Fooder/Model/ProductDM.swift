@@ -4,7 +4,6 @@
 //
 //  Created by ibrohim begaliev on 11/6/21.
 //
-
 import UIKit
 import SwiftyJSON
 import RealmSwift
@@ -16,6 +15,7 @@ class ProductDM{
     var name: String
     var cost: Double
     var discription: String
+    var isLike: Bool
     
     init(json: JSON) {
         self._id = json["_id"].stringValue
@@ -27,6 +27,7 @@ class ProductDM{
             phs.append(ph.stringValue)
         }
         self.photo = phs
+        self.isLike = false
     }
     
     

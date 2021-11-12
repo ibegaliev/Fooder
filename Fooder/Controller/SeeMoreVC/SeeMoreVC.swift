@@ -50,7 +50,7 @@ class SeeMoreVC: UIViewController {
 extension SeeMoreVC: UICollectionViewDelegate{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = SelectedProductVC(nibName: "SelectedProductVC", bundle: nil) as! SelectedProductVC
+        let vc = SelectedProductVC(nibName: "SelectedProductVC", bundle: nil) 
         vc.data = data[indexPath.row]
         vc.modalPresentationStyle = .overFullScreen
         present(vc, animated: true, completion: nil)
@@ -93,7 +93,7 @@ extension SeeMoreVC: UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        collectionView.reloadData()
+        
         
         return true
     }

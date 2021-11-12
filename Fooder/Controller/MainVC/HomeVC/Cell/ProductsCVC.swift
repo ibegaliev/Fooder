@@ -23,7 +23,6 @@ class ProductsCVC: UICollectionViewCell {
 
 //    MARK: - update cell
     func updateCell(image: [String], name: String, cost: String){
-        
         productCost.text = cost
         productName.text = name
         imageForCell.sd_setImage(with: URL(string: AppURL.baseURL + image.first!))

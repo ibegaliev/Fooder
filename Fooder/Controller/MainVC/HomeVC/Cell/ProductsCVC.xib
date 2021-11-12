@@ -56,8 +56,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="245" verticalHuggingPriority="245" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" image="err" translatesAutoresizingMaskIntoConstraints="NO" id="BqD-5w-pUR">
-                                <rect key="frame" x="67" y="41" width="150" height="150"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="245" verticalHuggingPriority="245" horizontalCompressionResistancePriority="740" verticalCompressionResistancePriority="740" image="archivebox.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BqD-5w-pUR">
+                                <rect key="frame" x="67" y="41.5" width="150" height="149"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="aDO-d9-UFY"/>
                                     <constraint firstAttribute="width" secondItem="BqD-5w-pUR" secondAttribute="height" id="iXC-rJ-aKg"/>
@@ -92,7 +92,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="err" width="128" height="128"/>
+        <image name="archivebox.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

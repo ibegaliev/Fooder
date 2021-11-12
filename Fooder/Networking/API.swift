@@ -52,7 +52,7 @@ class API {
         
     }
     
-//    MARK: - suces
+//    MARK: - souces
     class func souces(completion: @escaping ([ProductDM])->()){
         
         var product = [ProductDM]()
@@ -69,7 +69,7 @@ class API {
                     product.append(item)
                 }
                 completion(product)
-                print("✅✅✅")
+                print("✅-souces")
             } else {
                 print(json["message"].stringValue, "🤬🤬🤬")
             }
@@ -95,7 +95,7 @@ class API {
                     product.append(item)
                 }
                 completion(product)
-                print("✅✅✅")
+                print("✅-drinks")
             } else {
                 print(json["message"].stringValue, "🤬🤬🤬")
             }
@@ -121,7 +121,7 @@ class API {
                     product.append(item)
                 }
                 completion(product)
-                print("✅✅✅")
+                print("✅-snacks")
             } else {
                 print(json["message"].stringValue, "🤬🤬🤬")
             }
@@ -146,7 +146,7 @@ class API {
                     product.append(item)
                 }
                 completion(product)
-                print("✅✅✅")
+                print("✅-foods")
             } else {
                 print(json["message"].stringValue, "🤬🤬🤬")
             }
