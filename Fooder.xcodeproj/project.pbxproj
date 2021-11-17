@@ -29,6 +29,10 @@
 		8C249367273142770092177D /* PersonVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C249365273142770092177D /* PersonVC.xib */; };
 		8C24936A273142860092177D /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C249368273142860092177D /* HistoryVC.swift */; };
 		8C24936B273142860092177D /* HistoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C249369273142860092177D /* HistoryVC.xib */; };
+		8C5BDF94274377A500BEE665 /* CardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5BDF92274377A500BEE665 /* CardVC.swift */; };
+		8C5BDF95274377A500BEE665 /* CardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C5BDF93274377A500BEE665 /* CardVC.xib */; };
+		8C5BDF9827437C2200BEE665 /* CardTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5BDF9627437C2200BEE665 /* CardTVC.swift */; };
+		8C5BDF9927437C2200BEE665 /* CardTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C5BDF9727437C2200BEE665 /* CardTVC.xib */; };
 		8C7F99B127353C1C00866B6C /* SelectedProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7F99AF27353C1C00866B6C /* SelectedProductVC.swift */; };
 		8C7F99B227353C1C00866B6C /* SelectedProductVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C7F99B027353C1C00866B6C /* SelectedProductVC.xib */; };
 		8C8435D5273166200094D179 /* UserPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8435D4273166200094D179 /* UserPassword.swift */; };
@@ -69,6 +73,10 @@
 		8C249365273142770092177D /* PersonVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonVC.xib; sourceTree = "<group>"; };
 		8C249368273142860092177D /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		8C249369273142860092177D /* HistoryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryVC.xib; sourceTree = "<group>"; };
+		8C5BDF92274377A500BEE665 /* CardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardVC.swift; sourceTree = "<group>"; };
+		8C5BDF93274377A500BEE665 /* CardVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardVC.xib; sourceTree = "<group>"; };
+		8C5BDF9627437C2200BEE665 /* CardTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTVC.swift; sourceTree = "<group>"; };
+		8C5BDF9727437C2200BEE665 /* CardTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardTVC.xib; sourceTree = "<group>"; };
 		8C7F99AF27353C1C00866B6C /* SelectedProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedProductVC.swift; sourceTree = "<group>"; };
 		8C7F99B027353C1C00866B6C /* SelectedProductVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedProductVC.xib; sourceTree = "<group>"; };
 		8C8435D4273166200094D179 /* UserPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPassword.swift; sourceTree = "<group>"; };
@@ -165,6 +173,7 @@
 				8C249355273141BE0092177D /* MainVC */,
 				8C091F102734D0E80076399B /* SeeMoreVC */,
 				8C7F99AE27353ABC00866B6C /* SelectedProduct */,
+				8C5BDF912743778600BEE665 /* CardVC */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -234,6 +243,17 @@
 				8C249369273142860092177D /* HistoryVC.xib */,
 			);
 			path = HistoryVC;
+			sourceTree = "<group>";
+		};
+		8C5BDF912743778600BEE665 /* CardVC */ = {
+			isa = PBXGroup;
+			children = (
+				8C5BDF92274377A500BEE665 /* CardVC.swift */,
+				8C5BDF93274377A500BEE665 /* CardVC.xib */,
+				8C5BDF9627437C2200BEE665 /* CardTVC.swift */,
+				8C5BDF9727437C2200BEE665 /* CardTVC.xib */,
+			);
+			path = CardVC;
 			sourceTree = "<group>";
 		};
 		8C7F99AE27353ABC00866B6C /* SelectedProduct */ = {
@@ -365,7 +385,9 @@
 			files = (
 				8C249349273124B70092177D /* RegisterVC.xib in Resources */,
 				8C24936B273142860092177D /* HistoryVC.xib in Resources */,
+				8C5BDF95274377A500BEE665 /* CardVC.xib in Resources */,
 				8C091F142734D11A0076399B /* SeeMoreVC.xib in Resources */,
+				8C5BDF9927437C2200BEE665 /* CardTVC.xib in Resources */,
 				8C24933C27304FCA0092177D /* LaunchScreen.storyboard in Resources */,
 				8C9BB8C627392B790043E9D7 /* SelectedProductCell.xib in Resources */,
 				8C091F0E2734151F0076399B /* HeaderCVC.xib in Resources */,
@@ -431,6 +453,7 @@
 				8C091F132734D11A0076399B /* SeeMoreVC.swift in Sources */,
 				8C24935327313BB20092177D /* MainTBC.swift in Sources */,
 				8CCE1C6E273C3ED900C884AA /* AppRealm.swift in Sources */,
+				8C5BDF9827437C2200BEE665 /* CardTVC.swift in Sources */,
 				8C249366273142770092177D /* PersonVC.swift in Sources */,
 				8C8435DA27322C5D0094D179 /* URL.swift in Sources */,
 				8C24933027304FC90092177D /* AppDelegate.swift in Sources */,
@@ -440,6 +463,7 @@
 				8C9BB8C527392B790043E9D7 /* SelectedProductCell.swift in Sources */,
 				8C24934D2731252F0092177D /* RedVC.swift in Sources */,
 				8C8435D82731700F0094D179 /* API.swift in Sources */,
+				8C5BDF94274377A500BEE665 /* CardVC.swift in Sources */,
 				8C9BB8BD2737D9D00043E9D7 /* CategoryDM.swift in Sources */,
 				8C9BB8B62736DACA0043E9D7 /* Cache.swift in Sources */,
 				8C8435E2273260880094D179 /* ProductsCVC.swift in Sources */,
@@ -590,6 +614,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8996593D3H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Fooder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -601,7 +626,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Fooder;
+				PRODUCT_BUNDLE_IDENTIFIER = Fooder0000;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -617,6 +642,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8996593D3H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Fooder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -628,7 +654,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Fooder;
+				PRODUCT_BUNDLE_IDENTIFIER = Fooder0000;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

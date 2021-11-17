@@ -81,7 +81,7 @@ extension SeeMoreVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductsCVC", for: indexPath) as! ProductsCVC
-        cell.updateCell(image: data[indexPath.row].photo, name: data[indexPath.row].name, cost: "\(data[indexPath.row].cost)")
+//        cell.updateCell(image: data[indexPath.row].photo, name: data[indexPath.row].name, cost: "\(data[indexPath.row].cost)")
         return cell
         
     }

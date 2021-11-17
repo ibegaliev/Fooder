@@ -86,6 +86,9 @@
                             <integer key="value" value="15"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="addToCardd:" destination="-1" eventType="touchUpInside" id="PWU-Tq-1Ne"/>
+                    </connections>
                 </button>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dzr-Jc-nFh">
                     <rect key="frame" x="20" y="517.5" width="374" height="233"/>

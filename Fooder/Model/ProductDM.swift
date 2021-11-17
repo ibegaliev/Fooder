@@ -8,26 +8,32 @@ import UIKit
 import SwiftyJSON
 import RealmSwift
 
-class ProductDM{
+class ProductDM: Object {
     
-    var photo: [String]
-    var _id: String
-    var name: String
-    var cost: Double
-    var discription: String
-    var isLike: Bool
+    var photo = List<String>()
+    @objc dynamic var _id: String
+    @objc dynamic var name: String
+    @objc dynamic var cost: Double
+    @objc dynamic var discription: String
+    @objc dynamic var isLike: Bool = false
+    
+    required override init(){
+        _id = ""
+        name = ""
+        cost = 0
+        discription = ""
+    }
     
     init(json: JSON) {
         self._id = json["_id"].stringValue
         self.name = json["name"].stringValue
         self.cost = json["cost"].doubleValue
         self.discription = json["description"].stringValue
-        var phs = [String]()
-        for ph in json["photo"].arrayValue {
-            phs.append(ph.stringValue)
+        let photo1 = List<String>()
+        for ph in json["photo"].arrayValue{
+            photo1.append(ph.stringValue)
         }
-        self.photo = phs
-        self.isLike = false
+        self.photo = photo1
     }
     
     

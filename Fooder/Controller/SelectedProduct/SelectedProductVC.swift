@@ -7,6 +7,7 @@
 
 import UIKit
 import SDWebImage
+import RealmSwift
 
 class SelectedProductVC: UIViewController {
 
@@ -15,6 +16,7 @@ class SelectedProductVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var cost: UILabel!
     @IBOutlet weak var dist: UILabel!
+    var realm = try! Realm()
     
     var data: ProductDM?
     
@@ -48,6 +50,12 @@ class SelectedProductVC: UIViewController {
                 sender.setImage(UIImage(systemName: "heart"), for: .normal)
                 data?.isLike = false
                 sender.transform = CGAffineTransform(scaleX: 1, y: 1)
+                do {
+                    try! realm.write{
+//                        realm.delete(data!)
+                        print(realm.objects(ProductDM.self))
+                    }
+                }
             }
         } else {
             UIView.animate(withDuration: 0.15, delay: 0, options: .autoreverse) {
@@ -56,12 +64,28 @@ class SelectedProductVC: UIViewController {
                 sender.setImage(UIImage(systemName: "heart.fill"), for: .normal)
                 data?.isLike = true
                 sender.transform = CGAffineTransform(scaleX: 1, y: 1)
+                do {
+                    try! realm.write{
+                        realm.add(data!)
+                        print(realm.objects(ProductDM.self))
+                    }
+                }
             }
         }
     }
     
     @IBAction func backBtnTapped(_ sender: Any) {
         dismiss(animated: true)
+    }
+    
+    @IBAction func addToCardd(_ sender: UIButton) {
+        UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseOut) {
+            sender.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+        } completion: { _ in
+            UIView.animate(withDuration: 0.1, delay: 0, options: .curveEaseIn, animations: {
+                sender.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }, completion: nil)
+        }
     }
 }
 

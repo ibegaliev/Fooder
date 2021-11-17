@@ -7,11 +7,14 @@
 
 import UIKit
 import SwiftUI
+import RealmSwift
 
 class HomeVC: UIViewController {
 
 //    MARK: - vars
     var product: [ProductDM]?
+    
+    let realm = try! Realm()
     
     var headerLabel: [CategoryDM] = [
         CategoryDM(id: "1", name: "Foods", isSelected: true, funcUrl: AppURL.foods),
@@ -30,6 +33,13 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         settings()
         headerReload()
+        do {
+            try! realm.write({
+                realm.deleteAll()
+            })
+        } catch  {
+            
+        }
     }
     
     func headerReload(){
@@ -41,19 +51,19 @@ class HomeVC: UIViewController {
                         product = data
                         collectionView1.reloadData()
                     }
-                    collectionView1.reloadData()
+                    
                 case 1:
                     API.drinks { [self] data in
                         product = data
                         collectionView1.reloadData()
                     }
-                    collectionView1.reloadData()
+                    
                 case 2:
                     API.snacks { [self] data in
                         product = data
                         collectionView1.reloadData()
                     }
-                    collectionView1.reloadData()
+                    
                 case 3:
                     API.souces { [self] data in
                         product = data
@@ -68,8 +78,6 @@ class HomeVC: UIViewController {
     
     func settings(){
 //        MARK: - settings
-        
-        
         
         searchTF.delegate = self
         
@@ -86,6 +94,13 @@ class HomeVC: UIViewController {
         collectionView1.backgroundColor = IColor.hexStrToColor(hex: "#F2F2F2")
         collectionView1.register(UINib(nibName: "ProductsCVC", bundle: nil), forCellWithReuseIdentifier: "ProductsCVC")
     }
+    
+    @IBAction func cardButtonTapped(_ sender: Any) {
+        let vc = CardVC(nibName: "CardVC", bundle: nil)
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true, completion: nil)
+    }
+    
 
     @IBAction func seePressed(_ sender: Any) {
 //MARK: - see more button pressed
@@ -128,7 +143,7 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
         if collectionView == collectionView1 {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductsCVC", for: indexPath) as! ProductsCVC
-            cell.updateCell(image: product?[indexPath.row].photo ?? [""], name: product?[indexPath.row].name ?? "", cost: "\(product![indexPath.row].cost)")
+            cell.updateCell(image: (product?[indexPath.row].photo.first) ?? "eeee", name: product?[indexPath.row].name ?? "", cost: "\(product![indexPath.row].cost)")
             return cell
             
         } else {
