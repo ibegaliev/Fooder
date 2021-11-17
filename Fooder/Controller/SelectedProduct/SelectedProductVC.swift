@@ -43,16 +43,18 @@ class SelectedProductVC: UIViewController {
     
     @IBAction func heardTapped(_ sender: UIButton) {
         
-        if data?.isLike == true {
+        guard let data = data else {return}
+        
+        if data.isLike {
             UIView.animate(withDuration: 0.15, delay: 0, options: .autoreverse) {
                 sender.transform = CGAffineTransform(scaleX: 0.3, y: 0.3)
             } completion: { [self] _ in
                 sender.setImage(UIImage(systemName: "heart"), for: .normal)
-                data?.isLike = false
+                data.isLike = false
                 sender.transform = CGAffineTransform(scaleX: 1, y: 1)
                 do {
                     try! realm.write{
-//                        realm.delete(data!)
+                        realm.delete(data)
                         print(realm.objects(ProductDM.self))
                     }
                 }
@@ -62,11 +64,11 @@ class SelectedProductVC: UIViewController {
                 sender.transform = CGAffineTransform(scaleX: 0.3, y: 0.3)
             } completion: { [self] _ in
                 sender.setImage(UIImage(systemName: "heart.fill"), for: .normal)
-                data?.isLike = true
+                data.isLike = true
                 sender.transform = CGAffineTransform(scaleX: 1, y: 1)
                 do {
                     try! realm.write{
-                        realm.add(data!)
+                        realm.add(data)
                         print(realm.objects(ProductDM.self))
                     }
                 }

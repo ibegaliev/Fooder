@@ -131,13 +131,14 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 //    MARK: collection view layout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == collectionView1 {
-            return CGSize(width: self.collectionView1.frame.width*0.45, height: self.collectionView1.frame.height*0.85)
+            return CGSize(width: self.collectionView1.frame.width*0.45, height: self.collectionView1.frame.height*0.9)
         } else {
             return CGSize(width: self.headerCollectionView.frame.width*0.25, height: self.headerCollectionView.frame.height*0.7)
         }
     }
     
     
+//    MARK: - collection view cell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if collectionView == collectionView1 {
