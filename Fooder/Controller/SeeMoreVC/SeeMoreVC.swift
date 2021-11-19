@@ -16,15 +16,15 @@ class SeeMoreVC: UIViewController {
     
     var data = [ProductDM]()
     
+//    MARK: - view did load
     override func viewDidLoad() {
         super.viewDidLoad()
         uploadData()
         settings()
     }
-
-    func settings(){
+    
 //        MARK: - settings
-        
+    func settings(){
         view.backgroundColor = IColor.hexStrToColor(hex: "#F2F2F2")
         collectionView.backgroundColor = IColor.hexStrToColor(hex: "#F2F2F2")
         
@@ -38,7 +38,7 @@ class SeeMoreVC: UIViewController {
     }
     
     
-    
+//    MARK: - back button tapped
     @IBAction func backTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -67,6 +67,15 @@ extension SeeMoreVC: UICollectionViewDelegateFlowLayout {
         CGSize(width: collectionView.frame.width*0.45, height: collectionView.frame.height*0.4)
     }
     
+//    MARK: - inset for section at
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if section == 1 {
+            return UIEdgeInsets(top: 50, left: 10, bottom: 10, right: 10)
+        } else {
+            return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        }
+    }
+    
 }
 
 extension SeeMoreVC: UICollectionViewDataSource {
@@ -81,7 +90,7 @@ extension SeeMoreVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ProductsCVC", for: indexPath) as! ProductsCVC
-//        cell.updateCell(image: data[indexPath.row].photo, name: data[indexPath.row].name, cost: "\(data[indexPath.row].cost)")
+        cell.updateCell(image: data[indexPath.row].photo.first!, name: data[indexPath.row].name, cost: "\(data[indexPath.row].cost)")
         return cell
         
     }
@@ -90,10 +99,8 @@ extension SeeMoreVC: UICollectionViewDataSource {
 
 
 extension SeeMoreVC: UITextFieldDelegate {
-    
+//    MARK: - text field delegate
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        print("------------------------")
         
         return true
     }
@@ -103,8 +110,8 @@ extension SeeMoreVC: UITextFieldDelegate {
 
 extension SeeMoreVC {
     
+//    MARK: - upload data from data
     func uploadData(){
-        
         API.foods { [self] dt in
             for d in dt {
                 data.append(d)

@@ -7,15 +7,12 @@
 
 import UIKit
 import SwiftUI
-import RealmSwift
+
 
 class HomeVC: UIViewController {
 
 //    MARK: - vars
     var product: [ProductDM]?
-    
-    let realm = try! Realm()
-    
     var headerLabel: [CategoryDM] = [
         CategoryDM(id: "1", name: "Foods", isSelected: true, funcUrl: AppURL.foods),
         CategoryDM(id: "1", name: "Drinks", isSelected: false, funcUrl: AppURL.drinks),
@@ -33,13 +30,12 @@ class HomeVC: UIViewController {
         super.viewDidLoad()
         settings()
         headerReload()
-        do {
-            try! realm.write({
-                realm.deleteAll()
-            })
-        } catch  {
-            
-        }
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("@@@@", product)
     }
     
     func headerReload(){
@@ -77,7 +73,6 @@ class HomeVC: UIViewController {
     }
     
     func settings(){
-//        MARK: - settings
         
         searchTF.delegate = self
         

@@ -33,6 +33,9 @@
 		8C5BDF95274377A500BEE665 /* CardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C5BDF93274377A500BEE665 /* CardVC.xib */; };
 		8C5BDF9827437C2200BEE665 /* CardTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5BDF9627437C2200BEE665 /* CardTVC.swift */; };
 		8C5BDF9927437C2200BEE665 /* CardTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C5BDF9727437C2200BEE665 /* CardTVC.xib */; };
+		8C5EF2DF274613A100D52263 /* PersonTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5EF2DD274613A100D52263 /* PersonTVC.swift */; };
+		8C5EF2E0274613A100D52263 /* PersonTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C5EF2DE274613A100D52263 /* PersonTVC.xib */; };
+		8C794F1F27466A9400FE2460 /* ProductSM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C794F1E27466A9400FE2460 /* ProductSM.swift */; };
 		8C7F99B127353C1C00866B6C /* SelectedProductVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7F99AF27353C1C00866B6C /* SelectedProductVC.swift */; };
 		8C7F99B227353C1C00866B6C /* SelectedProductVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C7F99B027353C1C00866B6C /* SelectedProductVC.xib */; };
 		8C8435D5273166200094D179 /* UserPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C8435D4273166200094D179 /* UserPassword.swift */; };
@@ -77,6 +80,9 @@
 		8C5BDF93274377A500BEE665 /* CardVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardVC.xib; sourceTree = "<group>"; };
 		8C5BDF9627437C2200BEE665 /* CardTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTVC.swift; sourceTree = "<group>"; };
 		8C5BDF9727437C2200BEE665 /* CardTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardTVC.xib; sourceTree = "<group>"; };
+		8C5EF2DD274613A100D52263 /* PersonTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTVC.swift; sourceTree = "<group>"; };
+		8C5EF2DE274613A100D52263 /* PersonTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PersonTVC.xib; sourceTree = "<group>"; };
+		8C794F1E27466A9400FE2460 /* ProductSM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSM.swift; sourceTree = "<group>"; };
 		8C7F99AF27353C1C00866B6C /* SelectedProductVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedProductVC.swift; sourceTree = "<group>"; };
 		8C7F99B027353C1C00866B6C /* SelectedProductVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectedProductVC.xib; sourceTree = "<group>"; };
 		8C8435D4273166200094D179 /* UserPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPassword.swift; sourceTree = "<group>"; };
@@ -151,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				8C9BB8BA2736F7780043E9D7 /* ProductDM.swift */,
+				8C794F1E27466A9400FE2460 /* ProductSM.swift */,
 				8C9BB8BC2737D9D00043E9D7 /* CategoryDM.swift */,
 				8C9BB8B72736EDC50043E9D7 /* AppDM */,
 			);
@@ -232,6 +239,7 @@
 			children = (
 				8C249364273142770092177D /* PersonVC.swift */,
 				8C249365273142770092177D /* PersonVC.xib */,
+				8C5EF2DC2746137800D52263 /* PersonTVC */,
 			);
 			path = PersonVC;
 			sourceTree = "<group>";
@@ -254,6 +262,15 @@
 				8C5BDF9727437C2200BEE665 /* CardTVC.xib */,
 			);
 			path = CardVC;
+			sourceTree = "<group>";
+		};
+		8C5EF2DC2746137800D52263 /* PersonTVC */ = {
+			isa = PBXGroup;
+			children = (
+				8C5EF2DD274613A100D52263 /* PersonTVC.swift */,
+				8C5EF2DE274613A100D52263 /* PersonTVC.xib */,
+			);
+			path = PersonTVC;
 			sourceTree = "<group>";
 		};
 		8C7F99AE27353ABC00866B6C /* SelectedProduct */ = {
@@ -385,6 +402,7 @@
 			files = (
 				8C249349273124B70092177D /* RegisterVC.xib in Resources */,
 				8C24936B273142860092177D /* HistoryVC.xib in Resources */,
+				8C5EF2E0274613A100D52263 /* PersonTVC.xib in Resources */,
 				8C5BDF95274377A500BEE665 /* CardVC.xib in Resources */,
 				8C091F142734D11A0076399B /* SeeMoreVC.xib in Resources */,
 				8C5BDF9927437C2200BEE665 /* CardTVC.xib in Resources */,
@@ -459,6 +477,7 @@
 				8C24933027304FC90092177D /* AppDelegate.swift in Sources */,
 				8C24935027312DF20092177D /* Color.swift in Sources */,
 				8C24935E2731424A0092177D /* HomeVC.swift in Sources */,
+				8C794F1F27466A9400FE2460 /* ProductSM.swift in Sources */,
 				8C249362273142630092177D /* HeartVC.swift in Sources */,
 				8C9BB8C527392B790043E9D7 /* SelectedProductCell.swift in Sources */,
 				8C24934D2731252F0092177D /* RedVC.swift in Sources */,
@@ -472,6 +491,7 @@
 				8C249348273124B70092177D /* RegisterVC.swift in Sources */,
 				8C7F99B127353C1C00866B6C /* SelectedProductVC.swift in Sources */,
 				8C8435D5273166200094D179 /* UserPassword.swift in Sources */,
+				8C5EF2DF274613A100D52263 /* PersonTVC.swift in Sources */,
 				8C091F0D2734151F0076399B /* HeaderCVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

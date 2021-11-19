@@ -13,6 +13,7 @@
                 <outlet property="collectionView" destination="bce-Jn-Woi" id="7kU-0f-37s"/>
                 <outlet property="cost" destination="4jG-Zd-U3T" id="YBq-mj-4LW"/>
                 <outlet property="dist" destination="fDD-gY-aR9" id="jee-0n-qlC"/>
+                <outlet property="favoriteImgView" destination="TrM-zW-c89" id="rOx-jY-6Xf"/>
                 <outlet property="pageControl" destination="dLS-68-NDn" id="xB4-PS-EaP"/>
                 <outlet property="productName" destination="ifJ-sa-qw5" id="RWJ-y4-EdK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

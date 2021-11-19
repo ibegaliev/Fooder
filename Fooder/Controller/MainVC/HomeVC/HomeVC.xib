@@ -63,7 +63,7 @@ food for you</string>
                     <nil key="highlightedColor"/>
                 </label>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="mzP-GY-d5v">
-                    <rect key="frame" x="0.0" y="351.5" width="414" height="510.5"/>
+                    <rect key="frame" x="0.0" y="376.5" width="414" height="485.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EQC-3i-ApS">
                         <size key="itemSize" width="128" height="128"/>
@@ -86,7 +86,7 @@ food for you</string>
                     </collectionViewFlowLayout>
                 </collectionView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxA-lY-te2">
-                    <rect key="frame" x="322" y="320.5" width="67" height="31"/>
+                    <rect key="frame" x="322" y="345.5" width="67" height="31"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                     <connections>
@@ -136,7 +136,7 @@ food for you</string>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mzP-GY-d5v" secondAttribute="trailing" id="Cq7-8g-ppE"/>
                 <constraint firstItem="uDx-0o-yGi" firstAttribute="top" secondItem="Rpp-SF-H9A" secondAttribute="bottom" constant="10" id="DoZ-Yh-no4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Rpp-SF-H9A" secondAttribute="trailing" constant="30" id="S1m-4I-wUR"/>
-                <constraint firstItem="mzP-GY-d5v" firstAttribute="top" secondItem="uDx-0o-yGi" secondAttribute="bottom" constant="30" id="YW4-vt-eRL"/>
+                <constraint firstItem="mzP-GY-d5v" firstAttribute="top" secondItem="uDx-0o-yGi" secondAttribute="bottom" constant="55" id="YW4-vt-eRL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uDx-0o-yGi" secondAttribute="trailing" id="a7w-IG-FCX"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZxA-lY-te2" secondAttribute="trailing" constant="25" id="k3K-yu-Mo6"/>
                 <constraint firstItem="feM-y8-aAC" firstAttribute="top" secondItem="Mc0-WF-nza" secondAttribute="bottom" constant="10" id="llc-6V-gCr"/>

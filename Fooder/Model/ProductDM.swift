@@ -17,6 +17,10 @@ class ProductDM: Object {
     @objc dynamic var discription: String
     @objc dynamic var isLike: Bool = false
     
+    override class func primaryKey() -> String? {
+        return "_id"
+    }
+    
     required override init(){
         _id = ""
         name = ""
