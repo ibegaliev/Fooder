@@ -13,7 +13,7 @@ import IQKeyboardManagerSwift
 class RegisterVC: UIViewController {
 
     
-//    MARK: - vars
+//    MARK: - verebles
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var birthdayTF: UITextField!
     @IBOutlet weak var phoneTF: UITextField!

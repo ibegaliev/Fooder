@@ -11,10 +11,12 @@ import UIKit
  @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+//    MARK: - window
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
+//        MARK: - appication starts
         window = UIWindow()
         window?.makeKeyAndVisible()
         if AppCashe.readFromCache().count < 1 {

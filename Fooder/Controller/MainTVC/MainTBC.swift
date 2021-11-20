@@ -9,6 +9,7 @@ import UIKit
 
 class MainTBC: UITabBarController {
 
+//    MARK: - view did load
     override func viewDidLoad() {
         super.viewDidLoad()
         tabbarBuilder()
@@ -37,6 +38,7 @@ class MainTBC: UITabBarController {
         for vc in vc {
             vc.view.backgroundColor = IColor.hexStrToColor(hex: "F2F2F2")
         }
+        
         viewControllers = vc
         tabBar.backgroundColor = .none
         tabBar.tintColor = IColor.hexStrToColor(hex: "F94C07")

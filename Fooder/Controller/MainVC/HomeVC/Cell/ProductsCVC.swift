@@ -7,7 +7,8 @@
 
 import UIKit
 import SDWebImage
-import SwiftUI
+
+
 
 class ProductsCVC: UICollectionViewCell {
 

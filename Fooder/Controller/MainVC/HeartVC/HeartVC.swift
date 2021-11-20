@@ -22,6 +22,7 @@ class HeartVC: UIViewController {
         settings()
     }
     
+//    MARK: - view will appear
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         readDataFromRealm()
@@ -38,6 +39,7 @@ class HeartVC: UIViewController {
         collectionView.register(UINib(nibName: "ProductsCVC", bundle: nil), forCellWithReuseIdentifier: "ProductsCVC")
     }
     
+//    MARK: - read data from realm
     fileprivate func readDataFromRealm(){
         do {
             data.removeAll()
@@ -72,6 +74,7 @@ extension HeartVC: UICollectionViewDelegate, UICollectionViewDataSource, UIColle
         CGSize(width: collectionView.frame.width*0.45, height: collectionView.frame.height*0.35)
     }
     
+//MARK: - did select item at
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = SelectedProductVC(nibName: "SelectedProductVC", bundle: nil) as! SelectedProductVC
         vc.data = data[indexPath.row]

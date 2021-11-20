@@ -11,7 +11,7 @@ import SwiftUI
 
 class HomeVC: UIViewController {
 
-//    MARK: - vars
+//    MARK: - verebles
     var product: [ProductDM]?
     var headerLabel: [CategoryDM] = [
         CategoryDM(id: "1", name: "Foods", isSelected: true, funcUrl: AppURL.foods),
@@ -25,7 +25,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var collectionView1: UICollectionView!
     @IBOutlet weak var headerCollectionView: UICollectionView!
     
-    
+//    MARK: - view did load
     override func viewDidLoad() {
         super.viewDidLoad()
         settings()
@@ -33,11 +33,13 @@ class HomeVC: UIViewController {
         
     }
     
+//    MARK: - view did appear
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("@@@@", product)
+        
     }
     
+//    MARK: - header reload
     func headerReload(){
         for headerLabel in headerLabel.enumerated() {
             if headerLabel.element.isSelected {
@@ -72,6 +74,7 @@ class HomeVC: UIViewController {
         }
     }
     
+//    MARK: - settings
     func settings(){
         
         searchTF.delegate = self
@@ -90,15 +93,15 @@ class HomeVC: UIViewController {
         collectionView1.register(UINib(nibName: "ProductsCVC", bundle: nil), forCellWithReuseIdentifier: "ProductsCVC")
     }
     
+//    MARK: - card button tapped
     @IBAction func cardButtonTapped(_ sender: Any) {
         let vc = CardVC(nibName: "CardVC", bundle: nil)
         vc.modalPresentationStyle = .overFullScreen
         present(vc, animated: true, completion: nil)
     }
     
-
+//    MARK: - see more button pressed
     @IBAction func seePressed(_ sender: Any) {
-//MARK: - see more button pressed
         let vc = SeeMoreVC(nibName: "SeeMoreVC", bundle: nil)
         vc.modalPresentationStyle = .overFullScreen
         present(vc, animated: true, completion: nil)
@@ -110,9 +113,9 @@ class HomeVC: UIViewController {
 
 
 
-//MARK: collection view delegate and data sourse
 extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
+//    MARK: - number of section
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         if collectionView == collectionView1 {
@@ -156,6 +159,7 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 }
 
 extension HomeVC: UITextFieldDelegate {
+    
 //    MARK: - text field delegate
     func textFieldDidBeginEditing(_ textField: UITextField) {
         let vc = SeeMoreVC(nibName: "SeeMoreVC", bundle: nil)
@@ -168,6 +172,7 @@ extension HomeVC: UITextFieldDelegate {
 
 
 extension HomeVC: UICollectionViewDelegate{
+    
 //MARK: Collection view did select row
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == collectionView1 {
